@@ -16,10 +16,10 @@ timezone: Asia/Karachi
 
 title: Corporate Simon # the main title
 
-tagline: Simon's Site # it will display as the sub-title
+tagline: Bridging the gap between learning and application, Simon, a cybersecurity enthusiast and CTF competitor on HackTheBox and TryHackMe, lends his expertise as a Junior Moderator at Owlsec. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
- it's site where a skid named simon will post how to hack nsa
+ Empower your cybersecurity defenses. Gain valuable knowledge through actionable advice, real-world CTF writeups, red teaming strategies, and explorations of the dark web.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
