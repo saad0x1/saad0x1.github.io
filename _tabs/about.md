@@ -31,7 +31,6 @@ This website serves as a repository for my journey, featuring detailed walkthrou
 <a href="https://www.w3.org/html/" target="blank"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="50" height="50" /></a>
 <a href="https://git-scm.com/" target="_blank" rel="noreferrer"><img align="center" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="50" height="50" /></a>
 <a href="https://www.linux.org/" target="_blank" rel="noreferrer"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="50" height="50" /></a>
-<a href="https://www.metasploit.com" target="_blank" rel="noreferrer"><img align="center" src="https://www.metasploit.com/includes/images/favicon.ico" alt="metasploit" width="50" height="50" /></a>
 <a href="https://portswigger.net/burp" target="_blank" rel="noreferrer"><img align="center" src="https://avatars.githubusercontent.com/u/13749115?s=200&v=4" alt="burpsuite" width="50" height="50" /></a>
 <a href="https://www.zaproxy.org/" target="_blank" rel="noreferrer"><img align="center" src="https://avatars.githubusercontent.com/u/6716868?s=48&v=4" alt="zap" width="50" height="50" /></a>
 <a href="https://www.wireshark.org/" target="_blank" rel="noreferrer"><img align="center" src="https://www.wireshark.org/assets/icons/favicon.ico" alt="" width="50" height="50" /></a>
