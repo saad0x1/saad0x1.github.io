@@ -16,14 +16,14 @@ timezone: Asia/Karachi
 
 title: TheCyberSimon # the main title
 
-tagline: Simon is CyberSecuirty Enthusiast who plays CTFs on HackTheBox and TryHackMe.He is pretty active members of HackTheBox Community. # it will display as the sub-title
+tagline: Simon is CyberSecuirty Enthusiast who plays CTFs on HackTheBox and TryHackMe, He is pretty active members of HackTheBox Community. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
  Empower your cybersecurity defenses. Gain valuable knowledge through actionable advice, real-world CTF writeups, red teaming strategies, and explorations of the dark web.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://saad0x1.github.io"
+url: "https://thecybersimon.com"
 
 github:
   username: saad0x1 # change to your github username
