@@ -5,7 +5,7 @@ order: 4
 ---
 
 <h1 align="center">Hello There, it's me TheCyberSimon here!</h1>
-<h3 align="center">I community driven cybersec student, I love learning, breaking things, barely making and it's fun.</h3>
+<h3 align="center">I'm a community driven cybersec student, I love learning, breaking things, barely making and it's fun.</h3>
 
 I'm a passionate Cybersecurity enthusiast, self-taught Hacker, and dedicated CTF player. My journey in the realm of cybersecurity revolves around continual learning and hands-on practice, where I dedicate a significant portion of my time to acquiring new skills and applying them on diverse platforms such as TryHackMe and HackTheBox.
 
