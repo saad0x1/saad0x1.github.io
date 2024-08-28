@@ -3,12 +3,16 @@
 icon: fas fa-info-circle
 order: 4
 ---
-[!Facts]
+---
+
+**Facts**
 * I'm Saad, I'm 18 years old
 * I'm a Tech Geek, who likes to break thing, fix them and break them again to fix them.
 * I mostly spend my time in HackTheBox Community and their awesome academy + Labs.
 * I'm a trained paramedic volunteering for NGOs.
 * I'm quite active in tech/cybersec communities helping others learn about tech.
+
+---
 
 <div style="text-align: center; display: flex; justify-content: center; align-items: center;">
     <div style="display: inline-block; margin: 0 20px; vertical-align: middle;">
