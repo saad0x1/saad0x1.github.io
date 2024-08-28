@@ -1,13 +1,14 @@
 ---
-title: How To Caught cheaters in CTFs.
+title: How can we stop cheaters in CTFs?
 author: Saad
 date: 2023-02-10 00:00:00 +0500
 categories:
   - CTF
   - finding-fakes
 tags:
-  - how-to-detect-cheaters
-  - fake-hackers
+  - how-to-stop-cheaters
+  - stop-cheating
+  - why-larp
 img_path: /assets/img
 ---
 Hello there, it's me TheCyberSimon here!
