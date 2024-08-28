@@ -45,8 +45,9 @@ I asked how did you figured to bypass **CSP** on the site and got the cookies? a
 
 
 ## What I do with these cheaters?
-If I stumble upon **sus** activity or someone's sus behavior, I would try to talk and if I see they trying to hide that they cheated, report their profile.
+If I stumble upon **suspicious** activity or someone's suspicious behavior, I would try to talk and if I see they trying to hide that they cheated, report their profile.
 if it's a CTF going, contact the admin as fast you can and provide the proofs.
+But that's just my opinion.
 
 **I know no one cares if someone cheats or not?!**
 But I do if someone is interested in learning about things but ends up using writeups or cheating.
