@@ -57,12 +57,17 @@ One of the things is Platforms **TOS** like you can't make writeup of active con
 But some people still make, so point of this mentioning that these things encourage newbies
 to do Active content on HTB to get points and show off to others that "Hey I did a hard machine on HTB, purely an insane machine marked as hard."
 
+## Why should we stop it?
+_Well, it ruins their learning and they try to cheat in everything, ruining their own methodology.
+then somehow these people get jobs in industry and talented people get nothing._
+
 ## How do we stop it?
 
 - Flags should be dynamic!
 - Cheaters should be reported as fast as you can, reach out to the Admins.
 - If it's a platform, for example: If it's HTB, Send the writeup of active content or cheater's profile directly to HTB-Staff.
  
+
 
 
 
