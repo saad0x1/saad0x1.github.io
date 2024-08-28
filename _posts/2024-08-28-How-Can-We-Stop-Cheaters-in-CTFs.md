@@ -11,7 +11,7 @@ tags:
   - why-larp
 img_path: /assets/img
 ---
-Hello there, it's me TheCyberSimon here!
+**Hello** there, it's me TheCyberSimon here!
 I have spent good amount of time being with CTF Players and communities of these awesome 
 Cybersecurity training platforms such as **HackTheBox** & **TryHackMe**. 
 
