@@ -16,7 +16,7 @@ Hello there, it’s TheCyberSimon!
 
 I have spent a good amount of time being with CTF Players and communities of these awesome Cybersecurity training platforms such as HackTheBox and TryHackMe.
 
-I usually see some people pretending to be "hackers" but cheating on CTFs and ruining their learning process. Recently, I have been looking into these people's behavior. All they do is copy answers from writeups and make points to show off to others.
+I usually see some people pretending to be “hackers” that are cheating on CTFs and ruining their learning process. Recently, I have been looking into these people's behavior. All they do is copy answers from writeups and make points to show off to others.
 
 At some point, I got really tired of these people, so I came to a conclusion. Why not report these cheaters and also try to bait them to know if they are cheating in actual.
 
