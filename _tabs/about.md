@@ -17,6 +17,7 @@ order: 4
 ---
 
 <blockquote class="prompt-info">
+    <h3>HackTheBox & TryHackMe Profiles:</h3>
     <div style="text-align: center; display: flex; justify-content: center; align-items: center;">
         <div style="display: inline-block; margin: 0 20px; vertical-align: middle;">
             <script src="https://www.hackthebox.eu/badge/1604259"></script>
