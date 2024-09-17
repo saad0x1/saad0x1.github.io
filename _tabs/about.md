@@ -9,10 +9,9 @@ order: 4
 <p>Some Facts:</p>
 <ul>
 <li> • I'm Saad, 18 years old</li>
+<li> • </li>
 </blockqoute>
-
----
-
+ 
 <div style="text-align: center; display: flex; justify-content: center; align-items: center;">
     <div style="display: inline-block; margin: 0 20px; vertical-align: middle;">
         <script src="https://www.hackthebox.eu/badge/1604259"></script>
