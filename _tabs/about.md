@@ -8,14 +8,15 @@ order: 4
 <p>Some Facts:</p>
 <ul>
 <li>I'm Saad, 18 years old</li>
-<li>I'm a Tech Geek, who likes to break thing, fix them and break them again to fix them.</li>
+<li>I'm a Tech Geek, who likes to break things, fix them, and break them again to fix them.</li>
 <li>I'm a trained paramedic volunteering for NGOs.</li>
 <li>I'm quite active in tech/cybersec communities helping others learn about tech.</li>
 </ul>
-</blockqoute>
- 
+</blockquote>
 
-<blockqoute class="prompt-info">
+---
+
+<blockquote class="prompt-info">
 <ul>
 <div style="text-align: center; display: flex; justify-content: center; align-items: center;">
     <div style="display: inline-block; margin: 0 20px; vertical-align: middle;">
@@ -25,4 +26,4 @@ order: 4
         <script src="https://tryhackme.com/badge/2147671"></script>
     </div>
     </ul>
-</blockqoute>
+</blockquote>
