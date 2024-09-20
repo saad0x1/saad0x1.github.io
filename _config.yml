@@ -16,7 +16,7 @@ timezone: Asia/Karachi
 
 title: TheCyberSimon # the main title
 
-tagline: Simon a Community driven Cybersecurity Student working his way to become a Pentester, Proudly active memeber of HackTheBox Community. # it will display as the sub-title
+tagline: Simon a Community driven Cybersecurity Student working his way to become a Pentester, Proudly active member of HackTheBox Community. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
  Learn things with a Community Driven Cybersecurity student, I'll share my journey of struggling and learning new things and improving myself.
