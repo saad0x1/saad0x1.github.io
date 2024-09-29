@@ -9,7 +9,5 @@ order: 4
 <ul>
 <li>g0blin, badmin, vonderchild, bigbrainpro, Svvden, eth3rnet, D3rp1na, Gubarz, 0xNasrallah, ZQA, Goku0x01</li>
 <li>Thanks to my team: BotnetBuddies</li>
-<li></li>
-<li></li>
 </ul>
 </blockquote>
