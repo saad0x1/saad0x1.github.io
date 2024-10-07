@@ -23,7 +23,7 @@ order: 4
             <script src="https://www.hackthebox.eu/badge/1604259"></script>
         </div>
         <div style="display: inline-block; margin: 0 20px; vertical-align: middle;">
-          <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2147671" style='border:none;'></iframe>
+          <img src="https://tryhackme-badges.s3.amazonaws.com/0xPentester.png" alt="COOL" />
         </div>
     </div>
 </blockquote>
