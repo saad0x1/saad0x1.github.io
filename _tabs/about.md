@@ -19,11 +19,11 @@ order: 4
 <blockquote class="prompt-info">
     <p>HackTheBox & TryHackMe Profiles:</p>
     <div style="text-align: center; display: flex; justify-content: center; align-items: center;">
-        <div style="display: inline-block; margin: 0 20px; vertical-align: middle;">
-            <img src="https://www.hackthebox.eu/badge/1604259" />
+        <div style="display: inline-block; margin: 0 40px; vertical-align: middle;">
+            <script src="https://www.hackthebox.eu/badge/1604259"></script>
         </div>
         <div style="display: inline-block; margin: 0 20px; vertical-align: middle;">
-           <img src="https://tryhackme-badges.s3.amazonaws.com/0xPentester.png" alt="0xPentester.png" />
+          <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2147671" style='border:none;'></iframe>
         </div>
     </div>
 </blockquote>
