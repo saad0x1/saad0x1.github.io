@@ -20,7 +20,7 @@ order: 4
     <p>HackTheBox & TryHackMe Profiles:</p>
     <div style="text-align: center; display: flex; justify-content: center; align-items: center;">
         <div style="display: inline-block; margin: 0 20px; vertical-align: middle;">
-            <script src="https://www.hackthebox.eu/badge/1604259"></script>
+            <img src="https://www.hackthebox.eu/badge/1604259" />
         </div>
         <div style="display: inline-block; margin: 0 20px; vertical-align: middle;">
            <img src="https://tryhackme-badges.s3.amazonaws.com/0xPentester.png" alt="0xPentester.png" />
