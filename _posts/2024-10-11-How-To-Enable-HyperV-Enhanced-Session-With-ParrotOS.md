@@ -1,5 +1,5 @@
 ---
-title: How To Caught cheaters in CTFs.
+title: How To Enable HyperV Enhanced Session With ParrotOS
 author: Saad
 date: 2023-02-10 00:00:00 +0500
 categories:
