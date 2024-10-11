@@ -13,7 +13,7 @@ tags:
   - reg-enum
 img_path: /assets/img/htb
 ---
-# Box Info
+# Box Info:
 This was one of the Insane boxes that took 7Ds for the first blood and box got very bad reviews. Well Box is still very good to learn thing that are still useful to this day.
 Box only has HTTP and RPC exposed to the player, enumerating the site we don't find anything that could be a attack vector. Enumerating the RPC with client provides an interesting object that can be used to disclose the IPv6 of the box. Box is protected via firewall. via IPv6 can give access to backup shares, backup shares contains dump of whole AD and Registry which can be used to enumerate users and sprayhashes to find a valid one, this user can access the registry which has cerds to another user on the box, looking at powershell history of the user, we find that machine is configured to use auth via NTLMv1 which can be captured with responder and get the system hash and dump the SAM and SYSTEM to get Admin's hash for the box.
 
@@ -55,7 +55,7 @@ Port 135 is Endpoint Mapper and Component Object Model (COM) service control man
 _The tool needs `stringbinding` arguments to enable it's connection._
 looking at the help we can find it:
 ```
-└──╼ [★]$ impacket-rpcmap --help
+~$ impacket-rpcmap --help
 ncacn_ip_tcp:192.168.0.1[135]
 ncacn_np:192.168.0.1[\pipe\spoolss]
 ncacn_http:192.168.0.1[593]
