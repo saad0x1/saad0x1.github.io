@@ -11,7 +11,7 @@ tags:
   - activedirectory
   - userenum
   - reg-enum
-img_path: /assets/
+img_path: /assets/img/htb
 ---
 # Box Info
 This was one of the Insane boxes that took 7Ds for the first blood and box got very bad reviews. Well Box is still very good to learn thing that are still useful to this day.
@@ -42,10 +42,10 @@ Looking at the results we find that there is only two open ports.
 HTTP and MS-RPC.
 ### Port 80
 We can't find much on the site itself on port 80. it's static site.
-![port80.png](/assets/img/htb/port80.png)
+![](port80.png)
 
 I looked at the `support.html` page and still didn't find anything
-![support_page.png](/assets/img/htb/support_page.png)
+![](support_page.png)
 
 ### Port 135
 
@@ -457,7 +457,7 @@ HKU\SOFTWARE\GiganticHostingManagementSystem
 ```
 
 Evil-winrm works, we can get a shell and read the user flag:
-![winrm.png](/assets/img/htb/winrm.png)
+![](winrm.png)
 
 # Administrator
 
@@ -470,7 +470,7 @@ There is a PowerShell history file we can read in henry.vinson_adm's directory.
 $Cred = get-credential administrator
 invoke-command -credential $Cred -computername localhost -scriptblock {Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" lmcompatibilitylevel -Type DWORD -Value 2 -Force}
 ```
-![ntmlv1.png](/assets/htb/ntmlv1.png)
+![](ntmlv1.png)
 According to [Learn MS](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level), level 2 means it's configured to allow auth via NTLMv1 which insecure.
 Net-NTMLv1 has weak cryptography and it can be cracked, goal here is to capture the Net-NTLM hash now.
 
