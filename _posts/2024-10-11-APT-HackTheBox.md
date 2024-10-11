@@ -125,7 +125,7 @@ The scan provides bunch of RPC endpoints and their UUIDs.
 The MS-DCOM ones are defined [in here](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dcom/c25391af-f59e-40da-885e-cc84076673e4).  looking at there we can find `IObjectExporter` or `IOXIDResolver`. We can use [this script by mubix](https://github.com/mubix/IOXIDResolver/blob/main/IOXIDResolver.py)
 to resolve the IPv6.
 ```python
-└──╼ [★]$ python3 scripts/IOXIDResolver.py -t 10.129.96.60
+~$ python3 scripts/IOXIDResolver.py -t 10.129.96.60
 [*] Retrieving network interface of 10.129.96.60
 Address: apt
 Address: 10.129.96.60
