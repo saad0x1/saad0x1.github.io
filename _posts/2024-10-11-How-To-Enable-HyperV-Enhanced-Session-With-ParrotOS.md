@@ -20,7 +20,7 @@ Which leads to us not being able to copy paste something or hear any audio, but 
 
 _We need to enable Guest Services for the VM in Hyper-V which can be found in VM Settings as shown below:_
 #### Via GUI
-![][hyperv_vm.png]
+![](hyperv_vm.png)
 #### Via PowerShell
 ```powershell
 Set-VM "Your VM Name" -EnhancedSessionTransportType HVSocket
@@ -88,4 +88,4 @@ Now restart your Hyper-V VM and you should have the Enhanced Session. In case ka
 ### IT WORKS!!
 
 After doing all the steps above, you should get the prompt to change your resolution.
-![][hyperv_works.png]
+![](hyperv_works.png)
