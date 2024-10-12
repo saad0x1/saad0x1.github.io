@@ -1,7 +1,7 @@
 ---
 title: How To Enable HyperV Enhanced Session With ParrotOS
 author: Saad
-date: 2023-02-10 00:00:00 +0500
+date: 2024-10-11 00:00:00 +0500
 categories:
   - Windows
   - OS
