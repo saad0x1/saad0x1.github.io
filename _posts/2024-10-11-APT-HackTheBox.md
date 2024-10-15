@@ -3,14 +3,16 @@ title: APT HackTheBox
 author: Saad
 date: 2024-10-10 00:00:00 +0500
 categories:
-  - AD
   - HackTheBox
+  - AD
+  - Active Directory
 tags:
   - hashspray
-  - insane-box
-  - activedirectory
+  - insane-boxes
+  - active-directory
   - userenum
   - reg-enum
+  - remote-registry
 img_path: /assets/img/htb
 ---
 # Box Info:
