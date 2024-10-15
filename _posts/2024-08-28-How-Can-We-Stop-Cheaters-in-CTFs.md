@@ -8,8 +8,8 @@ categories:
   - why-cheat
 tags:
   - how-to-stop-cheaters
-  - stop-cheating
-  - why-larp
+  - stopping-cheaters
+  - lapring-solutions
 img_path: /assets/img
 ---
 Hello there, it’s TheCyberSimon!
