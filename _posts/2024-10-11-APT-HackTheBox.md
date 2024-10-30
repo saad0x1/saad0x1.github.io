@@ -14,7 +14,7 @@ tags:
   - userenum
   - reg-enum
   - remote-registry
-img_path: /assets/img/htb
+media_subpath: /assets/img/htb
 ---
 
 # Box Info:

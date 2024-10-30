@@ -12,7 +12,7 @@ tags:
   - parrot
   - tricks
   - xrdp
-img_path: /assets/img/2024-10-11-How-To-Enable-HyperV-Enhanced-Session-With-ParrotOS
+media_subpath: /assets/img/2024-10-11-How-To-Enable-HyperV-Enhanced-Session-With-ParrotOS
 ---
 Using Parrot OS is fun on Hyper-V which is really fast compare to other hypervisors, but we can't have an Enhanced Session in HyperV with Parrot OS
 Which leads to us not being able to copy paste something or hear any audio, but there is one way we can do it, let's take a look.

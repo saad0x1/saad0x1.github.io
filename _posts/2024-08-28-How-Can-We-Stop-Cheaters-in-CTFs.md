@@ -10,7 +10,7 @@ tags:
   - how-to-stop-cheaters
   - stopping-cheaters
   - lapring-solutions
-img_path: /assets/img/
+media_subpath: /assets/img/
 ---
 Hello there, it’s TheCyberSimon!
 
