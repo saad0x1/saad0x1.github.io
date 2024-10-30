@@ -7,10 +7,11 @@ order: 4
 <blockquote class="prompt-info">
 <p>Some Facts:</p>
 <ul>
-<li>I'm Saad, 18 years old</li>
-<li>I'm a Tech Geek, who likes to break things, fix them, and break them again to fix them.</li>
-<li>I'm a trained paramedic volunteering for NGOs.</li>
-<li>I'm quite active in tech/cybersec communities helping others learn about tech.</li>
+<li>Name is Saad, 18 years old</li>
+<li>A Tech Geek, who likes to break things, fix them, and break them again to fix them.</li>
+<li>Trained paramedic volunteering for NGOs.</li>
+<li>Quite active in tech/cybersec communities helping others learn about tech.</li>
+<li>Mostly doing web stuff..</li>
 </ul>
 </blockquote>
 
