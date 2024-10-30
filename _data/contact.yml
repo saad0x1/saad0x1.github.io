@@ -38,3 +38,18 @@
 # - type: threads
 #   icon: 'fa-brands fa-threads'
 #   url: ''                   # Fill with your Threads profile link
+
+#
+  - type: HackTheBox
+    icon: "fas fa-cube"
+    url:  'https://app.hackthebox.com/profile/1604259' 
+
+  - type: TryHackMe
+    icon: "fas fa-cloud"
+    url:  'https://tryhackme.com/p/0xPentester'
+
+
+  
+  - type: discord
+    icon: "fab fa-discord"
+    url: 'https://discord.com/users/1139104164136366110'
