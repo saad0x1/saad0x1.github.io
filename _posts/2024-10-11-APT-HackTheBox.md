@@ -2,7 +2,6 @@
 title: APT HackTheBox
 author: Saad
 date: 2024-10-10 00:00:00 +0500
-image: ./APT.png
 categories:
   - HackTheBox
   - AD
@@ -14,10 +13,11 @@ tags:
   - userenum
   - reg-enum
   - remote-registry
+image: APT.png
 media_subpath: /assets/img/htb
 ---
 
-# Box Info:
+## Box Info:
 This was one of the Insane boxes that took 7Ds for the first blood and box got very bad reviews, 11 Days after there was a hint added. Well Box is still very good to learn thing that are still useful to this day.
 Box only has HTTP and RPC exposed to the player, enumerating the site we don't find anything that could be a attack vector. Enumerating the RPC with client provides an interesting object that can be used to disclose the IPv6 of the box. Box is protected via firewall. via IPv6 can give access to backup shares, backup shares contains dump of whole AD and Registry which can be used to enumerate users and sprayhashes to find a valid one, this user can access the registry which has cerds to another user on the box, looking at powershell history of the user, we find that machine is configured to use auth via NTLMv1 which can be captured with responder and get the system hash and dump the SAM and SYSTEM to get Admin's hash for the box.
 
