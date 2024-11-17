@@ -4,7 +4,7 @@ author: Saad
 date: 2024-10-30 00:00:00 +0500
 categories:
   - HackTheBox
-  - Web Apps
+  - Easy Box
 tags:
   - blind-xss
   - xss
