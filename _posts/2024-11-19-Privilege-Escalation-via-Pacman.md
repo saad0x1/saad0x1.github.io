@@ -7,6 +7,9 @@ categories:
   - Arch
 tags:
   - privesc
+  - pacman
+  - arch
+  - privilege escalation
   - pacman privesc
   - makepkg
   - malicious pkg
