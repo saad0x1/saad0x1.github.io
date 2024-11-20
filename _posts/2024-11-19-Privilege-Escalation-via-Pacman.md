@@ -33,9 +33,9 @@ User skid may run the following commands on arch:
 
 ### Required stuff
 
-- [PKGBUILD](http://thecybersimon.com/posts/Privilege-Escalation-via-Pacman/#what-is-pkgbuild) shell script with the code provided below.
+- [PKGBUILD](https://thecybersimon.com/posts/Privilege-Escalation-via-Pacman/#what-is-pkgbuild) shell script with the code provided below.
 - SSH key pair, with the public key renamed (e.g., `id_rsa.pub`) to `authorized_keys`.
-- Build the package using [makepkg](http://thecybersimon.com/posts/Privilege-Escalation-via-Pacman/#what-is-makepkg).
+- Build the package using [makepkg](https://thecybersimon.com/posts/Privilege-Escalation-via-Pacman/#what-is-makepkg).
 - Install the package.
 
 ##### **What is PKGBUILD?**
@@ -144,7 +144,7 @@ echo "Don't forget to secure your private key: id_rsa"
 ### Required stuff
 
 - Local copy of `pacman.conf` in a writeable directory (e.g. `/dev/shm`).
-- A directory to hold [hooks](http://thecybersimon.com/posts/Privilege-Escalation-via-Pacman/#what-are-hooks-for-pacmanconf), create under `/dev/shm`.
+- A directory to hold [hooks](https://thecybersimon.com/posts/Privilege-Escalation-via-Pacman/#what-are-hooks-for-pacmanconf), create under `/dev/shm`.
 - A hook file (e.g. `test.hook`) in hook directory. (`/dev/shm/hook/test.hook`)
 - Update the local copy of `pacman.conf` the path of hook dir with your one.
 - Remove an installed pkg to trigger it.
