@@ -151,6 +151,9 @@ echo "Don't forget to secure your private key: id_rsa"
 
 #### Details
 
+#### **pacman.conf**
+> pacman.conf is the main configuration file for the pacman package manager in Arch Linux. It defines settings for package installation, updates, and repository management, including repository sources, options for handling dependencies, file locations, and hook settings. The file is typically located at `/etc/pacman.conf.`
+
 ##### **What are Hooks? (for pacman.conf)**
 > Hooks in pacman.conf automate tasks before or after package operations, like clearing caches, updating databases, or triggering systemd services, based on defined events (e.g., package install or removal). You can read more about it on [Here](https://wiki.archlinux.org/title/Pacman#Hooks). 
 
@@ -162,7 +165,7 @@ echo "Don't forget to secure your private key: id_rsa"
 ```bash
 [Action]
 When = PreTransaction
-Exec = /bin/sh -c "python3 /opt/set_dev_env.sh"
+Exec = /bin/sh -c "python3 /opt/set_dev_env.py"
 ```
 
 #### Implementing it
