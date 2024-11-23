@@ -1,7 +1,7 @@
 ---
 title: BoardLight HackTheBox
 author: Saad
-date: 2024-11-1 00:00:00 +0500
+date: 2024-11-18 00:00:00 +0500
 categories:
   - HackTheBox
   - Easy Box
