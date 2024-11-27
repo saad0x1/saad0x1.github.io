@@ -172,7 +172,7 @@ drwx------ 2 dev  dev  4.0K Jun  5 14:36 .cache
 -rw-r--r-- 1 dev  dev   807 Jan  6  2022 .profile
 -rw-r----- 1 root dev    33 Nov 27 12:51 user.txt
 ```
-![](http://njlaconference.info/sites/njlaconference.info/files/Hacker%20cat.jpeg)
+![](hackercat.png)
 
 Looking at the box, there are only 2 users. 
 ```bash
