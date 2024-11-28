@@ -3,7 +3,7 @@ title: How can we stop cheaters in CTFs?
 author: Saad
 date: 2023-02-10 00:00:00 +0500
 categories:
-  - finding-cheaters
+  - thoughts
   - hunting-cheaters
   - why-cheat
 tags:

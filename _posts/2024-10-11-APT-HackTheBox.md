@@ -4,15 +4,15 @@ author: Saad
 date: 2024-10-10 00:00:00 +0500
 categories:
   - HackTheBox
-  - AD
+  - Insane Box
   - Active Directory
 tags:
   - hashspray
-  - insane-boxes
-  - active-directory
-  - userenum
-  - reg-enum
-  - remote-registry
+  - insane boxes
+  - active directory
+  - user enum
+  - remote registry enum
+  - remote registry
 image: APT.png
 media_subpath: /assets/img/htb
 ---

@@ -417,3 +417,8 @@ while :; do
     sleep 0.1  # Small delay to avoid spamming
 done
 ```
+**Script in action**
+```
+joshua@codify:~$ bash root.sh
+Leaked Password: kljh12k3jhaskjh12kjh3 
+```

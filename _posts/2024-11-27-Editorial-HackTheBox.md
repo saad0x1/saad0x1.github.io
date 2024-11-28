@@ -80,7 +80,8 @@ The HTTP response shows the path of the image it got uploaded to:
 I tried accessing localhost but it hangs for some seconds and have the same response as site itself.
 But I can make a request to local?.
 
-After trying for sometime I got an interesting response back. 
+After trying for sometime I got an interesting response back on port 5000.
+I was guessing the prot number when I did the machine on release. When machine got retired, I went to read [0xdf's writeup](https://0xdf.gitlab.io/2024/10/19/htb-editorial.html#identify-internal-port) which showed a way to FUZZ it with `ffuf`,  go check it out.
 
 ```console
 ➜  editorial curl http://editorial.htb/static/uploads/b6be4416-74f2-439c-ab61-9324fdfe53e1
@@ -229,6 +230,7 @@ Woah, there goes the prod's creds. `prod : 080217_Producti0n_2023!@`.
 
 The creds works over both over `SSH` and `su`.
 
+**su**
 ```console
 dev@editorial:~/apps$ su prod
 Password:
@@ -252,6 +254,8 @@ User prod may run the following commands on editorial:
 ![](https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fc7cziks7c4dezyz8lkqs.png)
 
 The python script is fairly simple, No rocket science. It just clones a repo from url in that `clone_changes` directory.
+
+`clone_prod_change.py`
 ```python
 #!/usr/bin/python3
 

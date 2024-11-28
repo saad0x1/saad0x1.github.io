@@ -283,7 +283,7 @@ Sorry, user larissa may not run sudo on localhost.
 
 ####  SUID 
 
-We tried to look for SUIDs, Found four SetUIDs on `enlightenment` are really interesting.
+When tried to look for SUIDs, Found four SetUIDs on `enlightenment` are really interesting.
 It's Windows manager for X Windows System. 
 
 ```console
