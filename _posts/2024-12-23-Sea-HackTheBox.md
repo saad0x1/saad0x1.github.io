@@ -57,7 +57,7 @@ Site is just some bike themed thingy.
 Interestingly clicking on `How To Participate` takes to `/how-to-participate`.
 
 > How can I participate?
->To participate, you only need to send your data as a participant through [contact](http://sea.htb/contact.php). Simply enter your name, email, age and country. In addition, you can optionally add your website related to your passion for night racing.
+>To participate, you only need to send your data as a participant through contact. Simply enter your name, email, age and country. In addition, you can optionally add your website related to your passion for night racing.
 
 Clicking on `contact` leads to `http://sea.htb/contact.php`, Adding it to `/etc/hosts` file shows a contact forum.
 
