@@ -4,9 +4,7 @@ author: Saad
 date: 2024-10-11 00:00:00 +0500
 image: ./Hyper-V.png
 categories:
-  - OS
-  - Windows
-  - Tips&Tricks
+- Tips & Tricks
 tags:
   - hyperv
   - parrot

@@ -4,7 +4,6 @@ author: Saad
 date: 2024-11-18 00:00:00 +0500
 categories:
   - HackTheBox
-  - Easy Box
 tags:
   - cve-2023-30253
   - cve-2022-37706

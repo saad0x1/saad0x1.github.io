@@ -4,7 +4,6 @@ author: Saad
 date: 2024-11-23 00:00:00 +0500
 categories:
   - HackTheBox
-  - Easy Box
 tags:
   - node.js
   - cve-2023-30547	

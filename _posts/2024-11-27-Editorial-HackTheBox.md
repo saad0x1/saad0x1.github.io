@@ -4,7 +4,6 @@ author: Saad
 date: 2024-11-27 00:00:00 +0500
 categories:
   - HackTheBox
-  - Easy Box
 tags:
   - ssrf
   - git

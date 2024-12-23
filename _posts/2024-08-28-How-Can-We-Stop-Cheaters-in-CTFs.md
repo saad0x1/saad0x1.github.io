@@ -4,8 +4,6 @@ author: Saad
 date: 2023-02-10 00:00:00 +0500
 categories:
   - thoughts
-  - hunting-cheaters
-  - why-cheat
 tags:
   - how-to-stop-cheaters
   - stopping-cheaters

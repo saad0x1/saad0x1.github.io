@@ -3,8 +3,7 @@ title: Privilege Escalation via Pacman
 author: Saad
 date: 2024-11-19 00:00:00 +0500
 categories:
-  - OS
-  - Arch
+  - Tips & Tricks
 tags:
   - privesc
   - pacman

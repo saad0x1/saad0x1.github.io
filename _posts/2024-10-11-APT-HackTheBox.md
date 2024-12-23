@@ -4,8 +4,6 @@ author: Saad
 date: 2024-10-10 00:00:00 +0500
 categories:
   - HackTheBox
-  - Insane Box
-  - Active Directory
 tags:
   - hashspray
   - insane boxes
